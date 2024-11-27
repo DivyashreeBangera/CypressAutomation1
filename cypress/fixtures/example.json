@@ -1,0 +1,21 @@
+{
+  
+    "firstname": "Test",
+  "LastName": "QA",
+  "Email": "hello1@test.com",
+  "Company": "QA",
+  "Password": "Test@123",
+  "ConfirmPassword": "Test@123",
+  "BirthDay": "24",
+  "BirthMonth": "December",
+  "BirthYear": "2000",
+
+  "UserName": "Admin",
+  "TestPassword": "admin123"
+
+
+  
+  
+  
+  
+}
