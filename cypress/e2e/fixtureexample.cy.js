@@ -21,19 +21,21 @@ describe('Fixtures Demo', () => {
 
   it('fixturesdemo', () => {
 
-    cy.visit('https://demo.nopcommerce.com/register?returnUrl=%2F')
-    cy.get('#gender-female').check()
+    cy.visit('https://accounts.google.com/lifecycle/steps/signup/name?continue=https://mail.google.com/mail/u/0/&ddm=1&dsh=S-1022337335:1733323407071540&emr=1&flowEntry=SignUp&flowName=GlifWebSignIn&followup=https://mail.google.com/mail/u/0/&ifkv=AQDHYWo6Z8jIIYTuYmPm97n7IUQXN28UjxA5RIlgiRF8wW4-JyYpvG75vQZll3ECzKhDJ6WlTG_t&osid=1&service=mail&TL=AKOx4s1DiXGtVxTc4Hw771EPLDLzRgceF_SFpMPme_9D7A5oMSKv6P6THFWvfybe')
+    //cy.get('#gender-female').check()
+    cy.contains('Next').click();
     // Text Input fields
-    cy.get('#FirstName').type(Cypress.data.firstname) //First Name
-    cy.get('#LastName').type(Cypress.data.LastName) // Last Name
-    cy.get('#Email').type(Cypress.data.Email) //Email
-    cy.get('#Company').type(Cypress.data.Company) //Company
-    cy.get('#Password').type(Cypress.data.Password) //Password
-    cy.get('#ConfirmPassword').type(Cypress.data.ConfirmPassword) //Confirm Password
+    cy.get("[name='firstName']").type(Cypress.data.firstname) //First Name
+    cy.get("[name='lastName']").type(Cypress.data.LastName) // Last Name
+    cy.contains('Next').click();
+   // cy.get('#Email').type(Cypress.data.Email) //Email
+    //cy.get('#Company').type(Cypress.data.Company) //Company
+   // cy.get('#Password').type(Cypress.data.Password) //Password
+   // cy.get('#ConfirmPassword').type(Cypress.data.ConfirmPassword) //Confirm Password
 //Date Picker
-cy.get("[name='DateOfBirthDay']").select(Cypress.data.BirthDay) //Birth Day
-cy.get("[name='DateOfBirthMonth']").select(Cypress.data.BirthMonth) //Birth Month
-cy.get("[name='DateOfBirthYear']").select(Cypress.data.BirthYear) //Birth Year
+cy.get("[id='month']").select(Cypress.data.BirthMonth) //Birth Day
+cy.get("[id='day']").select(Cypress.data.BirthDay) //Birth Month
+cy.get("[id='year']").select(Cypress.data.BirthYear) //Birth Year
 
 //submit buttom
 //cy.get('#register-button').click()

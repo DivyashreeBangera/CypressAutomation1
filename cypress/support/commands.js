@@ -7,6 +7,7 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
+require('cypress-iframe');
 Cypress.Commands.add("login", (email, password) => {
     cy.visit('https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F')
     cy.get('input[name=Email]').clear()
