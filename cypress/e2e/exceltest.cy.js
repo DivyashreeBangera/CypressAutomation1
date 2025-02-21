@@ -4,12 +4,12 @@ describe('Read Excel Data using cy.task()', () => {
         .then((data) => {
           cy.log('Excel Data:', JSON.stringify(data));
   
-          // Example: Use data to fill a form on an example site
+          
           cy.visit('https://example.cypress.io/commands/actions'); 
   
-          // Fill out fields using data from Excel
+       
           cy.get('input[placeholder="Email"]').type(data[0].Email);
-          cy.get('input[placeholder="Password"]').type('Test@123'); // Dummy password
+          cy.get('input[placeholder="Password"]').type('Test@123'); 
           cy.get('button').contains('Submit').click();
         });
     });
